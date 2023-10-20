@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+*,
+* ::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+  color: #8d9eb0;
+  background-color: #f3f3f4;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  font-family: inherit;
+}
+
+[role *="button"]{
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "icons";
+  src: url("./assets/iconFont/fonts/icons.eot?d6pe0r");
+  src: url("./assets/iconFont/fonts/icons.eot?d6pe0r#iefix")
+      format("embedded-opentype"),
+    url("./assets/iconFont/fonts/icons.ttf?d6pe0r") format("truetype"),
+    url("./assets/iconFont/fonts/icons.woff?d6pe0r") format("woff"),
+    url("./assets/iconFont/fonts/icons.svg?d6pe0r#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"]::before,
+[class*=" _icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-eye-blocked:before {
+  content: "\e900";
+}
+._icon-eye:before {
+  content: "\e901";
+}
