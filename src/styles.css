@@ -43,12 +43,12 @@ a {
 
 @font-face {
   font-family: "icons";
-  src: url("./assets/iconFont/fonts/icons.eot?d6pe0r");
-  src: url("./assets/iconFont/fonts/icons.eot?d6pe0r#iefix")
+  src: url("./assets/iconFont/fonts/icons.eot?krtidz");
+  src: url("./assets/iconFont/fonts/icons.eot?krtidz#iefix")
       format("embedded-opentype"),
-    url("./assets/iconFont/fonts/icons.ttf?d6pe0r") format("truetype"),
-    url("./assets/iconFont/fonts/icons.woff?d6pe0r") format("woff"),
-    url("./assets/iconFont/fonts/icons.svg?d6pe0r#icons") format("svg");
+    url("./assets/iconFont/fonts/icons.ttf?krtidz") format("truetype"),
+    url("./assets/iconFont/fonts/icons.woff?krtidz") format("woff"),
+    url("./assets/iconFont/fonts/icons.svg?krtidz#icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -75,4 +75,7 @@ a {
 }
 ._icon-eye:before {
   content: "\e901";
+}
+._icon-cross:before {
+  content: "\e902";
 }

@@ -1,0 +1,31 @@
+:host {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.strenth-box__item {
+  flex: 1 1 auto;
+  border-radius: 500px;
+  background-color: #f3f4f9;
+}
+
+.green {
+  background-color: #6fc7a4;
+}
+
+.grey {
+  background-color: #f3f4f9;
+}
+
+.yellow {
+  background-color: #f9c575;
+}
+
+.red {
+  background-color: #ff8180;
+}
+
+.unvalid {
+  background-color: #ff8180;
+}
+

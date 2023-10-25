@@ -1,0 +1,10 @@
+<div
+  class="strenth-box__item"
+  [ngClass]="{
+    green: passwordLevel == 3,
+    yellow: !last && passwordLevel == 2,
+    red: first && passwordLevel == 1,
+    grey: passwordLevel == 0,
+    unvalid: !isValid
+  }"
+></div>

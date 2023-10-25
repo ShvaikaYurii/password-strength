@@ -1,0 +1,29 @@
+.content__strenth-box {
+  flex: 1 1 auto;
+  align-items: center;
+}
+.strenth-box {
+  display: flex;
+  gap: 20px;
+  padding: 8px 0;
+}
+.strenth-box__title {
+  font-size: 18px;
+}
+.strenth-box__items {
+  display: flex;
+  gap: 5px;
+  height: 8px;
+  width: 65%;
+}
+
+@media (max-width: 500px) {
+  .strenth-box {
+    flex-direction: column;
+    height: fit-content;
+    gap: 5px;
+  }
+  .strenth-box__items {
+    width: 100%;
+  }
+}

@@ -1,0 +1,14 @@
+<div class="content__strenth-box strenth-box">
+  <div class="strenth-box__items">
+    <box-item
+      *ngFor="let box of [].constructor(3); first as isFirst; last as isLast"
+      [first]="isFirst"
+      [last]="isLast"
+      [passwordLevel]="passwordLevel"
+      [isValid]="isValid"
+    ></box-item>
+  </div>
+  <p class="strenth-box__title" *ngIf="isValid">
+    {{ passwordStrenthLabels[passwordLevel] }}
+  </p>
+</div>

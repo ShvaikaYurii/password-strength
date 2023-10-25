@@ -3,64 +3,17 @@
     <div class="content__container">
       <div class="content__body">
         <h2 class="content__title">Enter password</h2>
-        <div class="content__input input-content">
-          <input
-            [type]="inputType"
-            class="input-content__field"
-            [ngClass]="{
-              'black-text': passwordStrenthLevel
-            }"
-            placeholder="Password"
-            [(ngModel)]="value"
-            (input)="changePassword()"
-          />
-          <span class="input-content__validation" *ngIf="passwordStrenthLevel == 1">Must be at least 8 characters long</span>
-          <span class="input-content__validation" *ngIf="passwordStrenthLevel == -1">The password contains Cyrillic characters</span>
-          <div
-            class="input-content__eye"
-            role="button"
-            [ngClass]="{
-              '_icon-eye': passwordVisibility,
-              '_icon-eye-blocked': !passwordVisibility
-            }"
-            (click)="passwordVisibilityHandler()"
-          ></div>
-        </div>
-        <div class="content__strenth-box strenth-box">
-          <div class="strenth-box__items">
-            <div
-              class="strenth-box__item"
-              [ngClass]="{
-                green: passwordStrenthLevel == 4,
-                yellow: passwordStrenthLevel == 3,
-                red: passwordStrenthLevel <= 1 || passwordStrenthLevel == 2
-              }"
-            ></div>
-            <div
-              class="strenth-box__item"
-              [ngClass]="{
-                green: passwordStrenthLevel == 4,
-                yellow: passwordStrenthLevel == 3,
-                red: passwordStrenthLevel <= 1
-              }"
-            ></div>
-            <div
-              class="strenth-box__item"
-              [ngClass]="{
-              'green': passwordStrenthLevel == 4,
-              'red': passwordStrenthLevel <= 1,
-            }"
-            ></div>
-          </div>
-          <p class="strenth-box__title">
-            {{
-              (passwordStrenthLevel <= 1 && " ") ||
-                (passwordStrenthLevel == 2 && "Too weak") ||
-                (passwordStrenthLevel == 3 && "Coud be stronger") ||
-                (passwordStrenthLevel == 4 && "Strong password")
-            }}
-          </p>
-        </div>
+        <form [formGroup]="formGoup" class="content__form">
+          <password-input
+            formControlName="password"
+            [errors]="formGoup.controls['password'].errors"
+            [invalidAndDirty]="
+              formGoup.controls['password'].invalid &&
+              formGoup.controls['password'].dirty
+            "
+          >
+          </password-input>
+        </form>
       </div>
     </div>
   </div>
